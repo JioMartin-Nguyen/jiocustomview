@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BorderImageView">
+        <attr name="bor_border" format="boolean" />
+        <attr name="bor_border_width" format="dimension" />
+        <attr name="bor_border_color" format="color" />
+        <attr name="bor_shadow" format="boolean" />
+        <attr name="bor_shadow_radius" format="dimension" />
+        <attr name="bor_shadow_color" format="color" />
+    </declare-styleable>
+</resources>
