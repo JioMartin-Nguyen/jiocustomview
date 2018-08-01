@@ -8,4 +8,20 @@
         <attr name="bor_shadow_radius" format="dimension" />
         <attr name="bor_shadow_color" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="JioRecycleView">
+        <attr name="android:divider" />
+        <attr name="divider" format="reference" />
+        <attr name="divider_height" format="dimension" />
+        <attr name="divider_paddding" format="dimension" />
+        <attr name="divider_padding_start" format="dimension" />
+        <attr name="divider_padding_end" format="dimension" />
+
+        <attr name="show_divider">
+            <flag name="none" value="0" />
+            <flag name="beginning" value="1" />
+        </attr>
+
+        <attr name="item_space" format="dimension" />
+    </declare-styleable>
 </resources>
