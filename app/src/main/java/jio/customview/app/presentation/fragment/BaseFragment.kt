@@ -1,4 +1,4 @@
-package jio.customview.app
+package jio.customview.app.presentation.fragment
 
 import android.support.v4.app.Fragment
 import android.view.View

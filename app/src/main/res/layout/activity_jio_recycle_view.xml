@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".JioRecycleViewActivity">
+    tools:context=".presentation.activity.JioRecycleViewActivity">
 
 
     <fragment
         android:id="@+id/exam_recycle_view_fragment"
-        android:name="jio.customview.app.JioRecycleViewFragment"
+        android:name="jio.customview.app.presentation.fragment.sample.JioRecycleViewFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

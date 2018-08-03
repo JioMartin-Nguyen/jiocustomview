@@ -13,22 +13,35 @@ import jio.customview.app.R
 import jio.customview.app.model.Food
 
 class FoodAdapter(var context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
     private var mFoods: ArrayList<Food> = arrayListOf()
     private val layoutInflater = LayoutInflater.from(context)
 
     companion object {
-
+        const val ITEM_1 = 0
+        const val ITEM_2 = 1
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = layoutInflater.inflate(viewType, parent, false)
-        return ViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder? {
+        return when (viewType) {
+            ITEM_1 -> {
+                val view = layoutInflater.inflate(R.layout.item_food, parent, false)
+                return ViewHolder.ItemFoodViewHolder(view)
+            }
+            ITEM_2 -> {
+                val view = layoutInflater.inflate(R.layout.item_food_bottom, parent, false)
+                return ViewHolder.BottomFoodViewHolder(view)
+            }
+            else -> {
+                null
+            }
+        }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (getItemViewType(position) == R.layout.item_food) {
+        if (getItemViewType(position) == ITEM_1) {
             (holder as? ViewHolder.ItemFoodViewHolder)?.bindItemFood(mFoods[position])
-        } else if (getItemViewType(position) == R.layout.item_food_bottom) {
+        } else if (getItemViewType(position) == ITEM_2) {
             (holder as? ViewHolder.BottomFoodViewHolder)?.bindItemBottom()
         }
     }
@@ -43,9 +56,9 @@ class FoodAdapter(var context: Context) : RecyclerView.Adapter<RecyclerView.View
 
     override fun getItemViewType(position: Int): Int {
         return if (position == mFoods.size) {
-            R.layout.item_food_bottom
+            ITEM_2
         } else {
-            R.layout.item_food
+            ITEM_1
         }
     }
 
