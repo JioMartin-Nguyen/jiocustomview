@@ -1,43 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@android:color/darker_gray"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:padding="12dp"
     >
 
-    <TextView
-        android:id="@+id/tv_food_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Thit ba chi"
-        />
+    <jio.customview.app.presentation.widget.RectBorderImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="205dp"
+        android:layout_height="155dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/photo"
+        app:fill_shape_color="@android:color/holo_blue_dark"
+        app:image_dimen_border_stroke="10dp"
+        app:image_dimen_radius="10dp"
+        app:image_shape="rectangle_fill_and_stroke"
+        app:background_color="@android:color/black"
+        app:stroke_shape_color="@color/red" />
+
+    <View
+        android:layout_width="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_marginLeft="12dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="12dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_food_name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="So luong: " />
+            tools:text="Thit ba chi" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="So luong: " />
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1" />
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_amount"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="1" />
+            tools:text="@string/food_price" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="@string/food_price"
-        />
+    <jio.customview.app.presentation.widget.RectBorderImageView
+        android:id="@+id/img_avatar_2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        app:fill_shape_color="@android:color/darker_gray"
+        app:image_dimen_border_stroke="5dp"
+        app:image_dimen_radius="5dp"
+        app:image_shape="rectangle"
+        app:stroke_shape_color="@color/ap7001_stroke_attach_file" />
 
 
 </LinearLayout>

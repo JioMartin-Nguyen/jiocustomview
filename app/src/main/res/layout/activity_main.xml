@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:background="@android:color/white"
+    tools:context=".presentation.activity.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,6 +24,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/test_recycleview"
+        />
+
+    <jio.customview.app.presentation.widget.RectBorderImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:image_dimen_radius="10dp"
+        android:layout_gravity="center|left"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="150dp"
+        android:background="@android:color/white"
+        app:image_shape="rectangle_fill_and_stroke"
+        app:stroke_shape_color="@color/ap7001_stroke_attach_file"
+        app:fill_shape_color="@android:color/darker_gray"
+        app:image_dimen_border_stroke="2dp"
         />
 
 </LinearLayout>

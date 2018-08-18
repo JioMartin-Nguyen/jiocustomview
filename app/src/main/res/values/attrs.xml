@@ -24,4 +24,18 @@
 
         <attr name="item_space" format="dimension" />
     </declare-styleable>
+
+
+    <declare-styleable name="RectBorderImageView">
+        <attr name="image_shape">
+            <enum name="rectangle" value="2"/>
+            <enum name="rectangle_fill" value="3"/>
+            <enum name="rectangle_fill_and_stroke" value="4"/>
+        </attr>
+        <attr name="image_dimen_border_stroke" format="dimension"/>
+        <attr name="image_dimen_radius" format="dimension"/>
+        <attr name="stroke_shape_color" format="color"/>
+        <attr name="fill_shape_color" format="color"/>
+        <attr name="background_color" format="color"/>
+    </declare-styleable>
 </resources>

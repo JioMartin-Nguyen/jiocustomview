@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="circle_image_avatar_border_gray">#DDFFDD</color>
+    <color name="rectangle_image_avatar_fill_gray">#33DDFF</color>
+    <color name="circle_image_avatar_border_orange">#3344dd</color>
+    <color name="ap7001_fill_gray_image">#969393</color>
+    <color name="ap7001_stroke_attach_file">#6d6d6e</color>
+    <color name="red">#f90404</color>
+    <color name="blue">#0439f9</color>
 </resources>

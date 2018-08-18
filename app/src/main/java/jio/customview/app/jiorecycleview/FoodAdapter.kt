@@ -10,7 +10,9 @@ import butterknife.BindString
 import butterknife.BindView
 import butterknife.ButterKnife
 import jio.customview.app.R
+import jio.customview.app.common.utils.DimensionUtill
 import jio.customview.app.model.Food
+import jio.customview.app.presentation.widget.RectBorderImageView
 
 class FoodAdapter(var context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -87,10 +89,24 @@ class FoodAdapter(var context: Context) : RecyclerView.Adapter<RecyclerView.View
             @BindView(R.id.tv_price)
             lateinit var tvPrice: TextView
 
+            @BindView(R.id.img_avatar)
+            lateinit var imgAvatar:RectBorderImageView
+
+            private val PADDING_TOP_BOTTOM = DimensionUtill.dpToPx(9F).toInt()
+            private val PADDING_START_END = DimensionUtill.dpToPx(20F).toInt()
+
+
+
             fun bindItemFood(food: Food) {
                 tvFoodName.text = food.nameFood
                 tvAmount.text = food.amount.toString()
                 tvPrice.text = String.format(priceTemplate, food.price)
+               // imgAvatar.setPadding(PADDING_START_END, PADDING_TOP_BOTTOM, PADDING_START_END, PADDING_TOP_BOTTOM)
+                /*if (adapterPosition / 2 == 1) {
+                    imgAvatar.setPadding(PADDING_START_END, PADDING_TOP_BOTTOM, PADDING_START_END, PADDING_TOP_BOTTOM)
+                } else {
+                    imgAvatar.setPadding(0, 0, 0, 0)
+                }*/
             }
         }
 
