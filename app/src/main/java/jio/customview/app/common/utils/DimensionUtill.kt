@@ -23,6 +23,11 @@ object DimensionUtill {
         return (px / Resources.getSystem().displayMetrics.density)
     }
 
+    // Translate dp to sp with scaledDensity
+    fun dpToSp(dp:Float):Float{
+        return (dp* Resources.getSystem().displayMetrics.scaledDensity)
+    }
+
     /**
      * Return the width of screen in px
      */

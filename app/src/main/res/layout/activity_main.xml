@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context=".presentation.activity.MainActivity">
 
     <TextView
@@ -13,31 +13,42 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
-    <jio.customview.app.example.SmileView
+    <jio.customview.app.presentation.widget.SmileView
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/btn_test_recycle_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/test_recycleview"
-        />
+        android:text="@string/test_recycleview" />
 
     <jio.customview.app.presentation.widget.RectBorderImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:image_dimen_radius="10dp"
-        android:layout_gravity="center|left"
-        android:scaleType="centerCrop"
+        android:layout_gravity="center"
         android:layout_marginTop="150dp"
         android:background="@android:color/white"
-        app:image_shape="rectangle_fill_and_stroke"
-        app:stroke_shape_color="@color/ap7001_stroke_attach_file"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
         app:fill_shape_color="@android:color/darker_gray"
         app:image_dimen_border_stroke="2dp"
-        />
+        app:image_dimen_radius="10dp"
+        app:image_shape="rectangle_fill_and_stroke"
+        app:stroke_shape_color="@color/ap7001_stroke_attach_file" />
 
+    <jio.customview.app.presentation.widget.SettingButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@color/red"
+        app:sb_lineBottomVisible="true"
+        app:sb_src="@drawable/photo"
+        app:sb_text="dsadaddsa" />
+
+    <jio.customview.app.presentation.widget.TallyCounterView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp" />
 </LinearLayout>

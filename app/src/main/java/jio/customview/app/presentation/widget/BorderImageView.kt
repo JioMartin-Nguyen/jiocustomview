@@ -1,4 +1,4 @@
-package jio.customview.app.example
+package jio.customview.app.presentation.widget
 
 import android.annotation.SuppressLint
 import android.content.Context

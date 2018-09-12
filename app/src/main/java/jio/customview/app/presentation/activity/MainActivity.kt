@@ -9,6 +9,8 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import jio.customview.app.R
+import jio.customview.app.domain.model.modelstandard.ActionState
+import jio.customview.app.model.Food
 import rx.Observable
 import rx.Subscriber
 
@@ -23,7 +25,40 @@ class MainActivity : AppCompatActivity() {
         ButterKnife.bind(this)
         btnTestRecycleView.text = "sdads"
 
-        exampleRxJava()
+        // exampleRxJava()
+        // exampleSequence()
+        exampleTest()
+    }
+
+    private fun exampleTest() {
+        System.out.println(ActionState.ACTIVE.name)
+        System.out.println(ActionState.INACTIVE.name)
+
+        System.out.println(ActionState.ACTIVE.reverseAction())
+        System.out.println(ActionState.INACTIVE.reverseAction())
+    }
+
+    private fun exampleSequence() {
+        val seq = sequenceOf(1, 2, 3)
+        println(seq.filter { it % 2 == 1 })   // <- Prints: kotlin.sequences.FilteringSequence@XXXXXXXX
+        println(seq.filter { it % 2 == 1 }.toList()) // Prints: [1,3]
+
+        val list = listOf<Int>(1, 2, 3)
+        println(list.filter { it % 2 == 1 }) // Prints: [1,3]
+
+        var mang = arrayOf(1, 2, 3, 4)
+        val sequenceTest = mang.iterator().asSequence()
+        // println(sequenceTest.joinToString())
+        println(sequenceTest
+                .filter {
+                    it % 2 == 0
+                }
+                .map {
+                    it * 2
+                }
+                .drop(1)
+                .joinToString())
+
     }
 
     @OnClick(R.id.btn_test_recycle_view)
@@ -32,7 +67,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun exampleRxJava() {
+        val myObservable =
+                Observable
+                        .from(arrayOf(1, 2, 3))
+                        .subscribe {
+                            System.out.println(it)
+                        }
 
+        val myObservableJust = Observable.just(arrayOf(1, 2, 3))
+                .subscribe {
+                    System.out.println("$it AAA")
+                }
     }
 
     fun getDetail(): Int {
