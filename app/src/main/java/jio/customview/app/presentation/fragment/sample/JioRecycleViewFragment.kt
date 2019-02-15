@@ -29,11 +29,10 @@ class JioRecycleViewFragment : BaseFragment() {
     private var foods: ArrayList<Food> = arrayListOf()
 
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflateView(R.layout.fragment_jio_recycleview)
     }
-
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
         initData()
@@ -43,7 +42,7 @@ class JioRecycleViewFragment : BaseFragment() {
         // Khi thay doi noi dung trong item, kich thuoc cua item la khong thay doi
         rvFoods.setHasFixedSize(true)
 
-        adapter = FoodAdapter(context)
+        adapter = FoodAdapter(context!!)
         rvFoods.adapter = adapter
         // Them 1 ItemDecoration vao trong recycle de phan chia cho cac Item trong RecycleView
         rvFoods.addItemDecoration(getDividerItemDecoration())

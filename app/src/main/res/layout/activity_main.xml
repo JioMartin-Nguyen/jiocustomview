@@ -51,4 +51,26 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/btn_cache_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/cache_image" />
+
+    <Button
+        android:id="@+id/btn_play_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/play_video" />
+
+    <Button
+        android:id="@+id/btn_cache_img_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/cache_image_2" />
+
 </LinearLayout>

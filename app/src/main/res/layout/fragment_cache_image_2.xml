@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_1">
+
+        <jio.customview.app.presentation.widget.HackyProblematicViewPager
+            android:id="@+id/view_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imv_back"
+            android:layout_width="@dimen/d_24dp"
+            android:layout_height="@dimen/d_24dp"
+            android:layout_gravity="center_vertical|start"
+            android:paddingStart="@dimen/d_10dp"
+            android:src="@drawable/ic_test"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imv_next"
+            android:layout_width="@dimen/d_24dp"
+            android:layout_height="@dimen/d_24dp"
+            android:layout_gravity="center_vertical|end"
+            android:paddingEnd="@dimen/d_10dp"
+            android:src="@drawable/ic_test"
+            tools:ignore="ContentDescription,RtlSymmetry"/>
+    </FrameLayout>
+
+    <jio.customview.app.presentation.widget.CommonToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@null"/>
+
+    <FrameLayout
+        android:id="@+id/layout_download"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_24dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_1">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imv_download"
+            android:layout_marginStart="@dimen/d_16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_test"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

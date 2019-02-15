@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:layout_height="?android:actionBarSize">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imv_icon_start_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"
+        android:padding="5dp"
+        tools:src="@drawable/ic_test"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/d_5dp"
+        android:layout_marginStart="@dimen/d_5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_1"
+            android:textSize="@dimen/s_17sp"
+            android:textStyle="bold"
+            tools:text="title" />
+
+        <TextView
+            android:id="@+id/tv_sub_title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_1"
+            android:visibility="gone"
+            tools:text="subtitle"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imv_icon_end_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerCrop"
+        android:padding="5dp"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_test"
+        tools:visibility="visible" />
+
+</LinearLayout>

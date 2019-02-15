@@ -10,4 +10,17 @@
     <color name="ap7001_stroke_attach_file">#6d6d6e</color>
     <color name="red">#f90404</color>
     <color name="blue">#0439f9</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="gray">#BFC1C5</color>
+
+    <!-- Color Smoke Test 5/22 Start-->
+    <color name="color_1">#3B3732</color>  <!-- Normal font color -->
+    <color name="color_2">#5F5F5F</color>  <!-- Subtext · Header · Footer -->
+    <color name="color_3">#B4B4B4</color>  <!-- Inactive (Not active)-->
+    <color name="color_4">#4991DC</color>  <!-- Link -->
+    <color name="color_5">#FFFFFF</color>  <!-- White letter -->
+    <!-- Color Smoke Test 5/22 End-->
+
 </resources>
+
+

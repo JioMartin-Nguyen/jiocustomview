@@ -30,7 +30,26 @@ class MainActivity : AppCompatActivity() {
         exampleTest()
     }
 
+    @OnClick(R.id.btn_cache_img)
+    fun clickCacheImage(){
+        goToTestCheckCacheImage()
+    }
+
+    @OnClick(R.id.btn_cache_img_2)
+    fun clickCacheImage2(){
+        goToTestCheckCacheImage2()
+    }
+
+    private fun goToTestCheckCacheImage() {
+        startActivity(CacheImageActivity.createIntent(this));
+    }
+
+    private fun goToTestCheckCacheImage2() {
+        startActivity(CacheImageActivity.createIntent(this));
+    }
+
     private fun exampleTest() {
+
         System.out.println(ActionState.ACTIVE.name)
         System.out.println(ActionState.INACTIVE.name)
 
@@ -66,7 +85,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, JioRecycleViewActivity::class.java))
     }
 
+    @OnClick(R.id.btn_play_video)
+    fun playVideo(){
+        startActivity(Intent(this, PlayVideoActivity::class.java))
+    }
+
     private fun exampleRxJava() {
+
         val myObservable =
                 Observable
                         .from(arrayOf(1, 2, 3))

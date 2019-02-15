@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- text size start-->
+    <dimen name="s_8sp">8sp</dimen>
+    <dimen name="s_11sp">11sp</dimen>
+    <dimen name="s_12sp">12sp</dimen>
+    <dimen name="s_14sp">14sp</dimen>
+    <dimen name="s_16sp">16sp</dimen>
+    <dimen name="s_17sp">17sp</dimen>
+    <dimen name="s_18sp">18sp</dimen>
+    <!--text size end-->
+
+    <!---->
     <dimen name="circle_image_view_border">2dp</dimen>
+    <dimen name="d_1dp">1dp</dimen>
+    <dimen name="d_5dp">5dp</dimen>
+    <dimen name="d_8dp">8dp</dimen>
+    <dimen name="d_10dp">10dp</dimen>
+    <dimen name="d_16dp">16dp</dimen>
+    <dimen name="d_24dp">24dp</dimen>
+    <dimen name="d_48dp">48dp</dimen>
+
 </resources>
